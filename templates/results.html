@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election Results</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/register">Register</a></li>
+                <li><a href="/elections">Manage Elections</a></li>
+                <li><a href="/vote">Cast Vote</a></li>
+                <li><a href="/results">View Results</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container mt-5">
+        <h2>Election Results</h2>
+        <form id="resultsForm" class="fade-in">
+            <div class="mb-3">
+                <label for="election_id" class="form-label">Election ID</label>
+                <input type="text" class="form-control" id="election_id" required>
+            </div>
+            <button type="submit" class="btn btn-info">Get Results</button>
+        </form>
+        <div id="results" class="mt-5">
+            <!-- Results will be displayed here -->
+        </div>
+    </main>
+    <footer class="text-center mt-5">
+        <p>&copy; 2023 Decentralized Voting System</p>
+    </footer>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

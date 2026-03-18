@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Elections</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/register">Register</a></li>
+                <li><a href="/elections">Manage Elections</a></li>
+                <li><a href="/vote">Cast Vote</a></li>
+                <li><a href="/results">View Results</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container mt-5">
+        <h2>Manage Elections</h2>
+        <form id="createElectionForm" class="fade-in">
+            <div class="mb-3">
+                <label for="election_id" class="form-label">Election ID</label>
+                <input type="text" class="form-control" id="election_id" required>
+            </div>
+            <div class="mb-3">
+                <label for="name" class="form-label">Election Name</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="candidates" class="form-label">Candidates (comma separated)</label>
+                <input type="text" class="form-control" id="candidates" required>
+            </div>
+            <button type="submit" class="btn btn-secondary">Create Election</button>
+        </form>
+        <h3 class="mt-5">Current Elections</h3>
+        <ul id="electionList" class="list-group">
+            <!-- Elections will be loaded here -->
+        </ul>
+    </main>
+    <footer class="text-center mt-5">
+        <p>&copy; 2023 Decentralized Voting System</p>
+    </footer>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
